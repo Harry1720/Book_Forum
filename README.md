@@ -1,102 +1,122 @@
-# 📚 MERN Book Forum APP Mobile
+# MERN Stack Book Forum - User Application and Administration Website
 
-A full-stack book forum application using MERN stack with mobile (Expo), web admin panel, and socket integration.
+A full-stack book forum application using MERN stack (MongoDB, Express.js, React Native, Node.js) featuring real-time communication, admin panel, and mobile support.
 
----
+## 🚀 Features
+### 📱 Mobile App (React Native/Expo)
+- **User Authentication**: Login, register, password reset with email verification
+- **Book Management**: Create, edit, delete books
+- **Social Features**: View, like, dislike, comment on books
+- **Search & Filter**: Advanced search with filtering by title or author
+- **Notifications**: Real-time push notifications for interactions
+- **Multilingual Support**: English and Vietnamese language support
+- **Report System**: Report inappropriate content, comments or users
+- **Profile Management**: Edit profile, change avatar, manage account
 
-## 🚀 Manual Project Run Guide
+### 🎛️ Admin Panel (React.js)
+- **Dashboard**: Overview of users, books, reports statistics
+- **User Management**: View, edit, suspend, delete user accounts
+- **Content Moderation**: Review and manage reported content
+- **Book Management**: Monitor and manage all book posts
+- **Genre Management**: Add, edit, hide/show book genres
 
-> ⚠️ **Note:** Expo CLI works best on Windows OS.
+### 🖥️ Backend (Node.js/Express)
+- **RESTful API**: Comprehensive API endpoints
+- **Real-time Communication**: Socket.IO server for live updates
+- **Authentication**: JWT-based secure authentication
+- **File Upload**: Cloudinary integration for image management
+- **Email Service**: Automated email notifications
+- **Database**: MongoDB with Mongoose ODM
+- **Report System**: Complete content moderation workflow
 
-<details>
-<summary><strong>🔧 Run Backend Server</strong></summary>
+## 🛠️ Tech Stack
+- **Frontend (Mobile):** React Native, Expo, Zustand, Async Storage
+- **Frontend (Admin Panel):** React.js, Material-UI (MUI), Vite
+- **Backend**:
+    - **Node.js** - Runtime environment
+    - **Express.js** - Web application framework
+    - **MongoDB** - NoSQL database
+    - **Mongoose** - MongoDB object modeling
+    - **Socket.IO** - Real-time bidirectional communication
+    - **JWT** - JSON Web Tokens for authentication
+    - **Bcrypt** - Password hashing
+    - **Cloudinary** - Cloud image storage and management
+    - **Nodemailer** - Email sending service
+    - **Multer** - File upload middleware
+    - **CORS** - Cross-origin resource sharing
+- **Development Tools:**
+    - **ESLint** - Code linting
+    - **Nodemon** - Development server auto-restart
+    - **dotenv** - Environment variable management
 
+## Some pictures of the project
+<img src="pics\Picture1.png" width="200"/>
+<img src="pics\Picture3.png"/>
+<img src="pics\Pic.png"/>
+<img src="pics\Picture6.png"/>
+<img src="pics\Picture7.png"/>
+
+## 🚀 How to run project manually
+**Note:** Expo CLI works best on Windows OS.
+
+### 🔧 Run Backend Server
 ```bash
 cd backend
 npm install
 npm run dev
 ```
 
-</details>
-
-<details>
-<summary><strong>📱 Run Frontend (Mobile App)</strong></summary>
-
-```bash
-cd FE
-npm install
-# Optional: Install this if socket-related errors occur
-npm install socket.io-client
-
-# Update API endpoint:
-# Edit FE/constants/api.js and replace the base URL with your local IP address
-
-npx expo
-```
-
-</details>
-
-<details>
-<summary><strong>📡 Run Socket Server</strong></summary>
-
+### 📡 Run Socket Server
 ```bash
 cd socket
 npm install
 npm run dev
 ```
 
-</details>
+### 📱 Run Mobile App
+```bash
+cd FE
+npm install
+npm install socket.io-client
+npx expo
+```
+**Note:** 
+- ```npm install socket.io-client``` Install this if socket-related errors occur.
+- Update API endpoint: Edit in ```FE/constants/api.js``` and replace the base URL with your local IP address.
+- Use your phone if the Expo App has been installed, or use Android Studio instead.
 
-<details>
-<summary><strong>🖥️ Run Admin Web</strong></summary>
-
+### 🖥️ Run Admin Web
 ```bash
 cd admin
 npm install
 npm run dev
 ```
 
-</details>
+## 🌐 How to run project without configuring (Deployments)
+- **Admin website:** Using **Vercel** & **Jamstack** 
+    - Access via https://mobile-ts-react-native.vercel.app
+- **APK app:** using **Render** 
+    - Download ```app-book-forum.apk``` in this repository
 
----
-
-## 🌐 Deployment
-
-- **Frontend (Admin website):** using **Vercel** & **Jamstack** [Admin Panel Website](https://mobile-ts-react-native.vercel.app)  
-- **Mobile App:** Developed using **Expo Application Services (EAS Build)**  
-- **APK for Android:** using **Render** [Download APK](https://drive.google.com/drive/u/0/folders/1vkefZtDQg6AyEZWCnVEFv7sa0YBBGEVG)
-- **Storing:** using  **Mongo DB Atlas** & **Cloudinary**
-
----
 
 ## 👥 User Roles
 
 | Role    | Access via Mobile | Access via Admin Web |
 |---------|------------------ |----------------------|
-| Admin   | ✅ Yes            | ✅ Yes              |
-| User    | ✅ Yes            | ❌ No               |
-| Guest   | ✅ Yes            | ❌ No               |
+| Admin   | ✅               | ✅                   |
+| User    | ✅               | ❌                   |
+| Guest   | ✅               | ❌                   |
 
----
-
-## 🧑‍💻 Developed By
-
-- Trần Đăng Nam  
-- Huỳnh Nguyễn Quốc Bảo  
-- Nguyễn Hoàng Gia Huy  
-- Phạm Vũ Minh Huy  
-- Phan Ngọc Thạch  
-**From UTH - Vietnam**
-
----
+## 🧑‍💻 Contributers
+|Members|Position|
+|-------|--------|
+|Trần Đăng Nam |Backend|
+|Nguyễn Hoàng Gia Huy|Backend|
+|Huỳnh Nguyễn Quốc Bảo|Frontend|
+|Phạm Vũ Minh Huy|Frontend|
+|Phan Ngọc Thạch|Frontend|
 
 ## 🔁 API Response Standard & Workflow
-
-
-<details>
-<summary><strong>📝 Git Commit & Branching Guidelines</strong></summary>
-
-
 ### ✅ Commit Message Convention
 
 | Type       | Description                             |
@@ -116,8 +136,6 @@ npm run dev
 - Examples:  
   - `feature/login`  
   - `bugfix/chat-not-loading`
-
----
 
 ### ✅ Success Response
 
@@ -166,8 +184,6 @@ npm run dev
 | `code`    | Internal error code                |
 | `meta`    | Metadata (timestamp, endpoint info)|
 
----
-
 ## 📊 REST API Status Codes
 
 | Status | Meaning                           |
@@ -178,5 +194,3 @@ npm run dev
 | `401`  | Unauthorized – Invalid token      |
 | `404`  | Not Found – Resource not found    |
 | `500`  | Internal Server Error             |
-
-</details>
