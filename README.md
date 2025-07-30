@@ -1,6 +1,6 @@
 # MERN Stack Book Forum - User Application and Administration Website
 
-A full-stack book forum application using MERN stack (MongoDB, Express.js, React Native, Node.js) featuring real-time communication, admin panel, and mobile support.
+A full-stack book forum application using MERN stack (MongoDB, Express.js, React Native, Node.js) featuring real-time communication, admin panel, and mobile support, with the help of **Claude Sonnet** and some other AI tools.
 
 ## 🚀 Features
 ### 📱 Mobile App (React Native/Expo)
